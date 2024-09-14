@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <h1>count is {count}</h1>
+      <h1>count is 123 {count}</h1>
     </>
   );
 }
