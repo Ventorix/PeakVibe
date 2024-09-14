@@ -2,6 +2,17 @@
 	"files": [],
 	"references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
 	"compilerOptions": {
+		"strict": true,
+		"noImplicitAny": true,
+		"module": "ESNext",
+		"target": "ES2017",
+		"jsx": "react-jsx",
+		"allowJs": true,
+		"moduleResolution": "node",
+		"types": ["@testing-library/jest-dom"],
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"allowUmdGlobalAccess": true,
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["./src/*"]
