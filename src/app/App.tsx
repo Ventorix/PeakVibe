@@ -1,8 +1,10 @@
+import { AppRouter } from './providers/router';
+
 function App() {
 	return (
-		<>
-			<h1 className='bg-green-600'>Hello</h1>
-		</>
+		<div>
+			<AppRouter />
+		</div>
 	);
 }
 

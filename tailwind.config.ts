@@ -1,23 +1,19 @@
 import type { Config } from 'tailwindcss';
 
-const config = {
+const config: Config = {
 	darkMode: ['class'],
+	// eslint-disable-next-line @typescript-eslint/no-require-imports
+	plugins: [require('tailwindcss-animate')],
 	content: [
+		'./src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+		'./src/components/**/*.{js,ts,jsx,tsx,mdx}',
+		'./src/app/**/*.{js,ts,jsx,tsx,mdx}',
 		'./pages/**/*.{ts,tsx}',
 		'./components/**/*.{ts,tsx}',
 		'./app/**/*.{ts,tsx}',
 		'./src/**/*.{ts,tsx}',
 	],
-	prefix: '',
 	theme: {
-		screens: {
-			xs: '480px',
-			sm: '640px',
-			md: '768px',
-			lg: '1024px',
-			xl: '1280px',
-			'2xl': '1536px',
-		},
 		container: {
 			center: true,
 			padding: '2rem',
@@ -26,6 +22,13 @@ const config = {
 			},
 		},
 		extend: {
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+			},
+			fontFamily: {
+				poppins: 'var(--font-poppins)',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -68,12 +71,12 @@ const config = {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: { height: '0' },
+					from: { height: '0px' },
 					to: { height: 'var(--radix-accordion-content-height)' },
 				},
 				'accordion-up': {
 					from: { height: 'var(--radix-accordion-content-height)' },
-					to: { height: '0' },
+					to: { height: '0px' },
 				},
 			},
 			animation: {
@@ -82,8 +85,5 @@ const config = {
 			},
 		},
 	},
-	// eslint-disable-next-line @typescript-eslint/no-require-imports
-	plugins: [require('tailwindcss-animate')],
-} satisfies Config;
-
+};
 export default config;
