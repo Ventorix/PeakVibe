@@ -1,11 +1,11 @@
-import { AppRouter } from './providers/router';
+import { AppRouter } from "./providers/router";
 
 function App() {
-	return (
-		<div>
-			<AppRouter />
-		</div>
-	);
+  return (
+    <div>
+      <AppRouter />
+    </div>
+  );
 }
 
 export default App;
